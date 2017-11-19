@@ -29,7 +29,7 @@
   <h1>Pagos última semana</h1>
   <div class="row row-md-6">
     {!! Form::open(['method'=>'GET','url'=>'reportes/pagos_ultima_semana','class'=>'navbar-form navbar-left','role'=>'search'])  !!}
-        {{ Form::input('text', 'search', null, array('class'=>'form-control', 'placeholder'=>'Documento')) }}
+        {{ Form::input('number', 'search', null, array('class'=>'form-control', 'placeholder'=>'Documento')) }}
         {{ Form::submit('Buscar', array('class' => 'btn btn-primary')) }}
     {{ Form::close() }}
 
@@ -37,7 +37,7 @@
       <!--a href="{{action('cartera\ReportesController@downloadPDF', 'w'.Input::get('search') )}}" 
         type="button" class="btn btn-sm btn-danger" style="float: right;">PDF</a-->
     </div>
-
+    <div class="alert alert-info">{{$message}}</div>
   </div>
   <div class="table-inverse table-responsive">
     <table class="table table-striped table-bordered table-hover">

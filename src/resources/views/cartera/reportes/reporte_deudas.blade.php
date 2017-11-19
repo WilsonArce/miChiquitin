@@ -17,6 +17,7 @@
           <li><a href="{{ URL::to('reportes/pagos_ultimo_mes') }}">Pagos último mes</a>
       </ul>
     </nav>
+  
   @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -32,7 +33,7 @@
   <div class="row">
     
       {!! Form::open(['method'=>'GET','url'=>'reportes/reporte_deudas','class'=>'navbar-form navbar-left','role'=>'search'])  !!}
-        {{ Form::input('text', 'search', null, array('class'=>'form-control', 'placeholder'=>'Documento')) }}
+        {{ Form::input('number', 'search', null, array('class'=>'form-control', 'placeholder'=>'Documento')) }}
         {{ Form::submit('Buscar', array('class' => 'btn btn-primary')) }}
       {{ Form::close() }}
     
@@ -40,6 +41,7 @@
       <!--a href="{{action('cartera\ReportesController@downloadPDF', 'd'.Input::get('search') )}}" 
         type="button" class="btn btn-sm btn-danger" style="float: right;">PDF</a-->
     </div>
+    <div class="alert alert-info">{{$message}}</div>
   </div>
   
   <div class="table-inverse table-responsive">
