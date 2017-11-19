@@ -57,7 +57,7 @@ class ReportesController extends Controller
           case !is_null($user):
             $user_id = $user->id;
             $deudas = Deuda::where('id_usuario',$user_id)->orderBy('created_at','desc')->get();
-            $message = 'Pagos realizados por '.$user->name.' '.$user->apellidos;
+            $message = 'Deudas del usuario '.$user->name.' '.$user->apellidos;
             break;
           default:
             $deudas = Deuda::orderBy('created_at','desc')->get();
