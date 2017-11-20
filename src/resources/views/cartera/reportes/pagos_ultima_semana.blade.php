@@ -46,7 +46,7 @@
                 <td>Fecha deuda</td>
                 <td>Valor pagado</td>
                 <td>Estado deuda</td>
-                <!--td colspan="2"></td-->
+                
             </tr>
         </thead>
         <tbody>

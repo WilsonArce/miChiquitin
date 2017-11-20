@@ -226,7 +226,7 @@ class ReportesController extends Controller
               return $pdf->stream('reporte_'.$user->name.'_'.Carbon::now().'.pdf');
               break;
         }
-        //dd($data_key);
+       
       }
     }
 

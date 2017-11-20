@@ -6,7 +6,7 @@
 
 @section('content')
 
-  <!--link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"-->
+  
 @if(\Request::is('reportes/reporte_deudas'))
 <div class="container">
 
@@ -54,7 +54,7 @@
                 <td>Valor a pagar</td>
                 <td>Plazo crédito</td>
                 <td>Estado</td>
-                <!--td colspan="2"></td-->
+                
             </tr>
         </thead>
         <tbody>
